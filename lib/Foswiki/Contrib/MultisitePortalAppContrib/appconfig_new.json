@@ -1,0 +1,19 @@
+{
+    "appname": "PortalContrib",
+    "description": "",
+    "installConfigs": [
+        {
+            "name": "Standard",
+            "destinationWeb": "Portal",
+            "webHomeConfig": {
+                "topicTitle": "Portal",
+                "viewTemplate": "PortalWebHomeView"
+            },
+            "webActionsConfig" : {
+                "sourceTopic": "PortalDefaultWebActions"
+            },
+            "formConfigs": [
+            ]
+        }
+    ]
+}

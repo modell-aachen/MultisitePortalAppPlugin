@@ -1,0 +1,21 @@
+!noci
+data/_apps/Portal/WebActions.txt 0664
+data/_apps/Portal/WebAtom.txt 0664
+data/_apps/Portal/WebChanges.txt 0664
+data/_apps/Portal/WebContentTemplates.txt 0664
+data/_apps/Portal/WebCreateNewTopic.txt 0664
+data/_apps/Portal/WebHome.txt 0664
+data/_apps/Portal/WebIndex.txt 0664
+data/_apps/Portal/WebNotify.txt 0664
+data/_apps/Portal/WebPreferences.txt 0664
+data/_apps/Portal/WebRss.txt 0664
+data/_apps/Portal/WebSearch.txt 0664
+data/_apps/Portal/WebSearchAdvanced.txt 0664
+data/_apps/Portal/WebStatistics.txt 0664
+data/_apps/Portal/WebTopicList.txt 0664
+data/System/PortalWebHomeViewTemplate.txt 0664
+lib/Foswiki/Contrib/PortalContrib.pm 0444
+lib/Foswiki/Contrib/PortalContrib/appconfig_new.json 0444
+locale/PortalContrib/de.po 0664
+pub/System/PortalContrib/portal.js 0444
+pub/System/PortalContrib/jsi18n.de.js 0444
