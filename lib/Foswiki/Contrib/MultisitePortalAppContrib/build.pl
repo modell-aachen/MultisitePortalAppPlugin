@@ -4,5 +4,5 @@ use warnings;
 BEGIN { unshift @INC, split( /:/, $ENV{FOSWIKI_LIBS} ); }
 
 use Foswiki::Contrib::Build;
-my $build = new Foswiki::Contrib::Build('PortalContrib');
+my $build = new Foswiki::Contrib::Build('MultisitePortalAppContrib');
 $build->build($build->{target});

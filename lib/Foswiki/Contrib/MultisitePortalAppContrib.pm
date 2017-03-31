@@ -1,5 +1,5 @@
 # See bottom of file for default license and copyright information
-package Foswiki::Contrib::PortalContrib;
+package Foswiki::Contrib::MultisitePortalAppContrib;
 use strict;
 use warnings;
 
