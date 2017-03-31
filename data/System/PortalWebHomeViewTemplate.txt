@@ -40,7 +40,7 @@
 <div class="expanded row medium-up-2 xlarge-up-2 xxxlarge-up-3 xxxxlarge-up-4">
 %FLEXWEBLIST{
    exclude="(%FLEXWEBLIST{subwebs="none" separator="|" format="$percentIF{\"'$percentWEBPREF{\"IsPublicationWeb\" alt=\"-1\" web=\"$name\"}$percent' != '1' \" then=\"$name\" else=\"none\"}$percent"}%).*" 
-   format="$percentIF{\"'$percentWEBPREF{\"IsPublicationWeb\" alt=\"-1\" web=\"$name\"}$percent' = '1' \" then=\"<web-tile :web=\\"'$percentMAKETEXT{$name}$percent'\\" :weblink=\\"'/$web'\\" :globalreq=\\"'$percentENCODE{\"$percentWEBPREF{\"GlobalRequirements\" web=\"$name\"}$percent\" type=\"entity\"}$percent'\\"  :sitelogo=\\"'$percentENCODE{\"$percentWIKILOGOIMG$percent\" type=\"entity\"}$percent'\\" :weblogo=\\"'$percentENCODE{\"$percentWEBPREF{\"WIKILOGOIMG\" web=\"$name\"}$percent\" type=\"entity\"}$percent'\\" :subwebs=\\"[\" else=\"\"}$percent"
+   format="<web-tile :web=\"'$percentMAKETEXT{$name}$percent'\" :weblink=\"'/$web'\" :globalreq=\"'$percentENCODE{\"$percentWEBPREF{\"GlobalRequirements\" web=\"$name\"}$percent\" type=\"entity\"}$percent'\"  :sitelogo=\"'%ENCODE{"%WIKILOGOIMG%" type="entity"}%'\" :weblogo=\"'$percentENCODE{\"$percentWEBPREF{\"WIKILOGOIMG\" web=\"$name\"}$percent\" type=\"entity\"}$percent'\" :subwebs=\"["
    header=""
    footer="]\"></web-tile>"
    subformat="{ web: '/$web', name: '$percentMAKETEXT{\"$name\"}$percent' },"
@@ -52,7 +52,7 @@
 <div class="expanded row medium-up-2 xlarge-up-2 xxxlarge-up-3 xxxxlarge-up-4">
 %FLEXWEBLIST{
    exclude="(%FLEXWEBLIST{subwebs="none" separator="|" format="$percentIF{\"'$percentWEBPREF{\"IsPublicationWeb\" alt=\"-1\" web=\"$name\"}$percent' != '0' \" then=\"$name\" else=\"none\"}$percent"}%).*" 
-   format="$percentIF{\"'$percentWEBPREF{\"IsPublicationWeb\" alt=\"-1\" web=\"$name\"}$percent' = '0' \" then=\"<web-tile :web=\\"'$percentMAKETEXT{$name}$percent'\\" :weblink=\\"'/$web'\\" :globalreq=\\"'$percentENCODE{\"$percentWEBPREF{\"GlobalRequirements\" web=\"$name\"}$percent\" type=\"entity\"}$percent'\\" :sitelogo=\\"'$percentENCODE{\"$percentWIKILOGOIMG$percent\" type=\"entity\"}$percent'\\" :weblogo=\\"'$percentENCODE{\"$percentWEBPREF{\"WIKILOGOIMG\" web=\"$name\"}$percent\" type=\"entity\"}$percent'\\" :subwebs=\\"[\" else=\"\"}$percent"
+   format="<web-tile :web=\"'$percentMAKETEXT{$name}$percent'\" :weblink=\"'/$web'\" :globalreq=\"'$percentENCODE{\"$percentWEBPREF{\"GlobalRequirements\" web=\"$name\"}$percent\" type=\"entity\"}$percent'\"  :sitelogo=\"'%ENCODE{"%WIKILOGOIMG%" type="entity"}%'\" :weblogo=\"'$percentENCODE{\"$percentWEBPREF{\"WIKILOGOIMG\" web=\"$name\"}$percent\" type=\"entity\"}$percent'\" :subwebs=\"["
    header=""
    footer=""
    subformat="{ web: '/$web', name: '$percentMAKETEXT{\"$name\"}$percent' },"

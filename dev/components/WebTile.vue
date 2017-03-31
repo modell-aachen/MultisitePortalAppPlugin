@@ -1,7 +1,7 @@
 <template>
     <div class="columns">
         <div class="wrapper">
-            <div @mouseover="hover = true" @mouseleave="hover = false" class="webbox">
+            <div @mouseover="mouseOver()" @mouseleave="hover = false" class="webbox">
                 <transition name="fade" mode="out-in" >
                     <span v-if="!show" class="weblogo">
                         <a :href="this.weblink+'/Processes'"><img :src="getWebLogo()" /></a>
@@ -12,8 +12,8 @@
                         </div>
                     </div>
                 </transition>
-               <transition name="fade"  mode="out-in">
-                    <div class="weboverlay" v-if="overlay">
+                <transition name="fade" v-on:after-enter="afterEnter" ode="out-in">
+                    <div v-if="!show && overlay" class="weboverlay" >
                         <a v-on:click="overlay = false">
                             <i class="fa fa-times" aria-hidden="true"></i>
                         </a>
@@ -21,7 +21,7 @@
                         <span>{{globalreq}}</span>
                     </div>
                     <div class="webhover" v-if="hover && !overlay && !show">
-                        <a class="" v-on:click="overlay = true">
+                        <a class="" v-on:click="clickHover();">
                             <i class="fa fa-info-circle" aria-hidden="true"></i>
                         </a>
                     </div>
@@ -61,6 +61,18 @@ export default {
             }else{
                 return this.weblogo;
             }
+        },
+        afterEnter(el) {
+            el.className += " afterEnter";
+        },
+        mouseOver(){
+            if(!this.overlay)this.hover = true;
+        },
+        clickHover(){
+            this.hover=false;
+            setTimeout(function(){
+                this.overlay = true;
+            }.bind(this), 400);
         }
     },
     components: {
@@ -101,14 +113,18 @@ export default {
                     color: #52cae4;
                 }
             }
-            .subwebs div{
-                padding: 8px;
-                a.sublink {
-                  width: 100%;
+            .subwebs {
+                margin-left: auto;
+                margin-right: auto;
+                div {
+                    padding: 8px;
+                    a.sublink {
+                      width: 100%;
+                    }
                 }
-            }
-            .subwebs .btnlast{
-              padding-left: 0px;
+                .btnlast{
+                    padding-left: 0px;
+                }
             }
             .weboverlay{
                 color: #fff;
@@ -116,7 +132,8 @@ export default {
                 height: 100%;
                 margin-top: -150px;
                 background-color: #52cae4;
-                opacity: 0.85;
+                z-index: 10000;
+                //opacity: 0.85;
                 a{
                     position: relative;
                     float: right;
@@ -153,12 +170,18 @@ export default {
             color: #52cae4;
         }
     }
-    .portal .fade-enter-active,
-    .portal .fade-leave-active {
-      transition: opacity .5s
+    .afterEnter{
+        opacity: 0.85;
     }
-    .portal .fade-enter,
-    .portal .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
-      opacity: 0
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity .5s;
+    }
+    .fade-enter-to{
+        opacity: 0.85 !important;
+    }
+    .fade-enter,
+    .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+        opacity: 0;
     }
 </style>
