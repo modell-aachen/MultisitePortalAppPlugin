@@ -14,8 +14,8 @@ data/_apps/Portal/WebSearchAdvanced.txt 0664
 data/_apps/Portal/WebStatistics.txt 0664
 data/_apps/Portal/WebTopicList.txt 0664
 data/System/PortalWebHomeViewTemplate.txt 0664
-lib/Foswiki/Contrib/PortalContrib.pm 0444
-lib/Foswiki/Contrib/PortalContrib/appconfig_new.json 0444
-locale/PortalContrib/de.po 0664
-pub/System/PortalContrib/portal.js 0444
-pub/System/PortalContrib/jsi18n.de.js 0444
+lib/Foswiki/Contrib/MultisitePortalAppContrib.pm 0444
+lib/Foswiki/Contrib/MultisitePortalAppContrib/appconfig_new.json 0444
+locale/MultisitePortalAppContrib/de.po 0664
+pub/System/MultisitePortalAppContrib/portal.js 0444
+pub/System/MultisitePortalAppContrib/jsi18n.de.js 0444
