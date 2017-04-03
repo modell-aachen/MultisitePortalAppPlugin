@@ -117,9 +117,10 @@ export default {
                 margin-left: auto;
                 margin-right: auto;
                 div {
-                    padding: 8px;
+                    padding: 8px 8px 0px 8px;
                     a.sublink {
                       width: 100%;
+                      margin: 0 0 1rem;
                     }
                 }
                 .btnlast{
