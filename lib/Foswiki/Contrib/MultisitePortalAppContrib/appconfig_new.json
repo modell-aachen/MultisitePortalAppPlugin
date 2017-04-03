@@ -10,6 +10,7 @@
                 "viewTemplate": "PortalWebHomeView"
             },
             "webActionsConfig" : {
+                "sourceTopic": "MultisitePortalDefaultWebActions"
             },
             "formConfigs": [
             ]
