@@ -12,6 +12,7 @@ data/_apps/Portal/WebSearch.txt 0664
 data/_apps/Portal/WebSearchAdvanced.txt 0664
 data/_apps/Portal/WebTopicList.txt 0664
 data/System/PortalWebHomeViewTemplate.txt 0664
+data/System/MultisitePortalDefaultWebActions.txt 0664
 lib/Foswiki/Contrib/MultisitePortalAppContrib.pm 0444
 lib/Foswiki/Contrib/MultisitePortalAppContrib/appconfig_new.json 0444
 locale/MultisitePortalAppContrib/de.po 0664
