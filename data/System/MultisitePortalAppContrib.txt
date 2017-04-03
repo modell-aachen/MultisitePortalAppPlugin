@@ -5,8 +5,11 @@ Modell Aachen Multisite Portal WikiApp
 
 ---++ Installation
 
+The contrib can be installed via the AppManager.
 
 ---++ Customization
+
+This Portal is default for Multisite-Wikis. It can not be customized.
 
 ---++ Update Instructions
 

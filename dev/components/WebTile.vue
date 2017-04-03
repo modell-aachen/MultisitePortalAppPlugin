@@ -132,7 +132,8 @@ export default {
                 height: 100%;
                 margin-top: -150px;
                 background-color: #52cae4;
-                z-index: 10000;
+                z-index: 1000;
+                position: relative;
                 //opacity: 0.85;
                 a{
                     position: relative;
@@ -159,6 +160,10 @@ export default {
                 max-height: 160px;
                 padding: 30px;
             }
+            a{
+                position: relative;
+                z-index: 99;
+            }
         }
         a.btnswitch{
             color: #7f7b71;
@@ -175,7 +180,7 @@ export default {
     }
     .fade-enter-active,
     .fade-leave-active {
-        transition: opacity .5s;
+        transition: opacity .25s;
     }
     .fade-enter-to{
         opacity: 0.85 !important;
@@ -183,5 +188,15 @@ export default {
     .fade-enter,
     .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
         opacity: 0;
+    }
+    .portal .widgetBlockTitle{
+        margin-left: .9375rem;
+        margin-bottom: 15px;
+    }
+    #modacHeading{
+        margin-left: .9375rem;
+    }
+    .localreq {
+        margin-top: 100px;
     }
 </style>
