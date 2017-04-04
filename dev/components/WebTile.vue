@@ -69,10 +69,8 @@ export default {
             if(!this.overlay)this.hover = true;
         },
         clickHover(){
-            this.hover=false;
-            setTimeout(function(){
-                this.overlay = true;
-            }.bind(this), 400);
+            this.hover = false;
+            this.overlay = true;
         }
     },
     components: {
@@ -118,10 +116,10 @@ export default {
                 margin-right: auto;
                 div {
                     padding: 8px 8px 0px 8px;
-                    a.sublink {
-                      width: 100%;
-                      margin: 0 0 1rem;
-                    }
+                }
+                div a.sublink {
+                  width: 100%;
+                  margin: 0 0 1rem;
                 }
                 .btnlast{
                     padding-left: 0px;

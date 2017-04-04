@@ -6,6 +6,7 @@
 %TMPL:END% 
 
 %TMPL:DEF{"content"}%
+%VUE{VERSION="2"}%
 %ADDTOZONE{
   "head"
   id="FONTAWESOME"

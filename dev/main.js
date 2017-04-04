@@ -1,8 +1,6 @@
-import Vue from 'vue/dist/vue.js'
+/* global $ Vue */
 import WebTile from './components/WebTile.vue'
 import $ from 'jquery'
-
-window.Vue = Vue;
 
 $( function () {
     new Vue({
