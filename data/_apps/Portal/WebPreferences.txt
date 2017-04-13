@@ -1,10 +1,10 @@
-%META:TOPICINFO{author="3abfa98b-f92b-42ab-986e-872abca52a49" comment="" date="1490707876" format="1.1" reprev="2" version="2"}%
+%META:TOPICINFO{author="3abfa98b-f92b-42ab-986e-872abca52a49" comment="" date="1491902620" format="1.1" reprev="2" version="2"}%
 ---+!! <nop>%WEB% Web Preferences
 
 %TOC%
 
 ---++ Appearance
-
+   * Set DISABLE_LOCAL_APPLICATION_WEB_LEFT = 1
    * Set WEBBGCOLOR = #efefef
       * <sticky>web-specific background color, <span style='background-color: %WEBBGCOLOR%'> current color </span></sticky>
 
@@ -20,26 +20,25 @@
 ---++ Wiki application settings
 
    * WebTopicEditTemplate
-      * default template for new topics in this web, if this topic does not exist,  [[%SYSTEMWEB%.WebTopicEditTemplate][site-level default template]] will be used
+      * default template for new topics in this web, if this topic does not exist, [[%SYSTEMWEB%.WebTopicEditTemplate][site-level default template]] will be used
 
    * Set WEBFORMS =
       * Comma separated list of forms that can be attached to topics in this web. See [[%SYSTEMWEB%.DataForms][DataForms]] for more information.
 
 ---++ Access control
 
-Users or groups who are allowed to view, change and rename topics in the <nop>%WEB% web.  Empty settings are not meaningful.
-Use ==*== to indicate everyone including the guest users.   DENY the WikiGuest user to restrict an action to authenticated (logged-in) users.
+Users or groups who are allowed to view, change and rename topics in the <nop>%WEB% web. Empty settings are not meaningful.Use ==*== to indicate everyone including the guest users. DENY the WikiGuest user to restrict an action to authenticated (logged-in) users.
 
    * Set DENYWEBVIEW = WikiGuest* Set ALLOWWEBVIEW = 
    * Set DENYWEBCHANGE = WikiGuest* Set ALLOWWEBCHANGE = %USERSWEB%.AdminGroup
    * Set DENYWEBRENAME = 
    * Set ALLOWWEBRENAME = %USERSWEB%.AdminUser
 
-If ={FeatureAccess}{AllowRaw}= is set to =acl= in configure, then the following rules can also be used: 
+If ={FeatureAccess}{AllowRaw}=  is set to =acl=  in configure, then the following rules can also be used:
    * #Set DENYWEBHISTORY = %USERSWEB%.WikiGuest
    * #Set ALLOWWEBHISTORY =
 
-If ={FeatureAccess}{AllowHistory}= is set to =acl= in configure, then the following rules can also be used: 
+If ={FeatureAccess}{AllowHistory}=  is set to =acl=  in configure, then the following rules can also be used:
    * #Set DENYWEBRAW = %USERSWEB%.WikiGuest
    * #Set ALLOWWEBRAW =
 
@@ -49,10 +48,10 @@ Users or groups allowed to change or rename this <nop>%TOPIC% topic: (e.g., [[%U
    * Set ALLOWTOPICRENAME = %USERSWEB%.AdminUser
 
 ---
+
 %INCLUDE{"%SYSTEMWEB%.WebPreferencesHelp"}%
-
-
 
    * Web Created with KEY set
 
+   * 
       * Set ALLOWWEBCHANGE = %USERSWEB%.AdminUser
