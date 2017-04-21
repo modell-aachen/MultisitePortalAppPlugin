@@ -44,9 +44,9 @@
          exclude="(%FLEXWEBLIST{subwebs="none" separator="|" format="$percentIF{\"'$percentWEBPREF{\"MULTISITE_ISPUBLICATIONWEB\" alt=\"-1\" web=\"$name\"}$percent' != '1' \" then=\"$name\" else=\"none\"}$percent"}%).*" 
          format="<web-tile :web=\"'$percentMAKETEXT{$name}$percent'\" :weblink=\"'/$web'\" :globalreq=\"'$percentENCODE{\"$percentWEBPREF{\"MULTISITE_GLOBALREQUIREMENTS\" web=\"$name\"}$percent\" type=\"entity\"}$percent'\"  :sitelogo=\"'%ENCODE{"%WIKILOGOIMG%" type="entity"}%'\" :weblogo=\"'$percentENCODE{\"$percentWEBPREF{\"WIKILOGOIMG\" web=\"$name\"}$percent\" type=\"entity\"}$percent'\" :subwebs=\"["
          header=""
-         footer="]\"></web-tile>"
+         subfooter="]\"></web-tile>"
          subformat="{ web: '/$web', name: '$percentMAKETEXT{\"$name\"}$percent' },"
-         subfooter=""
+         footer=""
       }%
     </div>
   </div>
@@ -57,8 +57,8 @@
          exclude="(OUTemplate|%FLEXWEBLIST{subwebs="none" separator="|" format="$percentIF{\"'$percentWEBPREF{\"MULTISITE_ISPUBLICATIONWEB\" alt=\"-1\" web=\"$name\"}$percent' != '0' \" then=\"$name\" else=\"none\"}$percent"}%).*" 
          format="<web-tile :web=\"'$percentMAKETEXT{$name}$percent'\" :weblink=\"'/$web'\" :globalreq=\"'$percentENCODE{\"$percentWEBPREF{\"MULTISITE_GLOBALREQUIREMENTS\" web=\"$name\"}$percent\" type=\"entity\"}$percent'\"  :sitelogo=\"'%ENCODE{"%WIKILOGOIMG%" type="entity"}%'\" :weblogo=\"'$percentENCODE{\"$percentWEBPREF{\"WIKILOGOIMG\" web=\"$name\"}$percent\" type=\"entity\"}$percent'\" :subwebs=\"["
          header=""
-         footer="]\"></web-tile>"
-         subfooter=""
+         subfooter="]\"></web-tile>"
+         footer=""
          subformat="{ web: '/$web', name: '$percentMAKETEXT{\"$name\"}$percent' },"
       }%
     </div>
