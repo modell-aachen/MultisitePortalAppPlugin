@@ -119,7 +119,7 @@ export default {
                 }
                 div a.sublink {
                   width: 100%;
-                  margin: 0 0 1rem;
+                  margin: 0 0 0;
                 }
                 .btnlast{
                     padding-left: 0px;
