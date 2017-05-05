@@ -1,0 +1,7 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1409216673" format="1.1" reprev="2" version="2"}%
+
+
+%META:PREFERENCE{name="ALLOWTOPICCHANGE" title="ALLOWTOPICCHANGE" type="Set" value="AdminUser"}%
+%META:PREFERENCE{name="NOWYSIWYG" title="NOWYSIWYG" type="Set" value="1"}%
+%META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="PortalWebHomeView"}%
+%META:PREFERENCE{name="TOPICTITLE" title="TOPICTITLE" type="Set" value="Company Portal"}%

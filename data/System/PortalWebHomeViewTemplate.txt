@@ -1,0 +1,68 @@
+%META:TOPICINFO{author="3abfa98b-f92b-42ab-986e-872abca52a49" comment="" date="1490707876" format="1.1" version="1"}%
+%TMPL:INCLUDE{"view"}%
+
+%TMPL:DEF{"top_simple"}%
+  <div class="patternTop"><div id="modacHeading">%MAKETEXT{%TOPICTITLE%}%</div></div>
+%TMPL:END% 
+
+%TMPL:DEF{"content"}%
+%VUE{VERSION="2"}%
+%ADDTOZONE{
+  "head"
+  id="FONTAWESOME"
+  text="<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"%PUBURLPATH%/%SYSTEMWEB%/FontAwesomeContrib/css/font-awesome.min.css\" />"
+}%
+%ADDTOZONE{
+  "script"
+  id="MULTISITEPORTALAPPCONTRIB::SCRIPTS"
+  requires="JQUERYPLUGIN::FOSWIKI::PREFERENCES"
+  text="<script type='text/javascript' src='%PUBURLPATH%/System/MultisitePortalAppContrib/portal.js'></script>"
+}%
+%ADDTOZONE{
+  "script"
+  id="MULTISITEPORTALAPPCONTRIB::I18N"
+  requires="jsi18nCore"
+  text="<script type='text/javascript' src='%PUBURLPATH%/System/MultisitePortalAppContrib/jsi18n.%IF{"$LANGUAGE!=''" then="%LANGUAGE%" else="en"}%.js'></script>"
+}%
+%ADDTOZONE{
+  "script"
+  id="FOUNDATION::SCRIPTS"
+  requires="JQUERYPLUGIN::FOSWIKI::PREFERENCES"
+  text="<script type='text/javascript' src='%PUBURLPATH%/System/FlatSkin/js/foundation.js'></script>"
+}%
+%ADDTOZONE{
+  "head"
+  id="FLATSKIN::STYLES"
+  text="<link rel='stylesheet' href='%PUBURLPATH%/System/FlatSkin/css/flatskin_wrapped.min.css' />"
+}%
+
+<div class="portal flatskin-wrapped">
+  <div class="globalreq">
+    <div class="widgetBlockTitle">%MAKETEXT{"Global Requirements"}%</div>
+    <div class="expanded row medium-up-2 xlarge-up-2 xxxlarge-up-3 xxxxlarge-up-4">
+      %FLEXWEBLIST{
+         exclude="(%FLEXWEBLIST{subwebs="none" separator="|" format="$percentIF{\"'$percentWEBPREF{\"MULTISITE_ISPUBLICATIONWEB\" alt=\"-1\" web=\"$name\"}$percent' != '1' \" then=\"$name\" else=\"none\"}$percent"}%).*" 
+         format="<web-tile :web=\"'$percentFORMATLIST{\"$map($web)\" map=\"%MODAC_WEBMAPPINGS{default=""}%\"}$percent'\" :weblink=\"'/$web'\" :globalreq=\"'$percentFORMATLIST{\"$map($percentWEBPREF{\"MULTISITE_GLOBALREQUIREMENTS\" web=\"$name\"}$percent)\" map=\"%MODAC_WEBMAPPINGS{default=""}%\"}$percent'\"  :sitelogo=\"'%ENCODE{"%WIKILOGOIMG%" type="entity"}%'\" :weblogo=\"'$percentENCODE{\"$percentWEBPREF{\"WIKILOGOIMG\" web=\"$name\"}$percent\" type=\"entity\"}$percent'\" :subwebs=\"["
+         header=""
+         subfooter="]\"></web-tile>"
+         subformat="{ web: '/$web', name: '$percentFORMATLIST{\"$map($name)\" map=\"%MODAC_WEBMAPPINGS{default=""}%\"}$percent' },"
+         footer=""
+      }%
+      %{$percentENCODE{\"$percentWEBPREF{\"MULTISITE_GLOBALREQUIREMENTS\" web=\"$name\"}$percent\" type=\"entity\"}$percent}%
+    </div>
+  </div>
+  <div class="localreq">
+    <div class="widgetBlockTitle">%MAKETEXT{"Local Requirements"}%</div>
+    <div class="expanded row medium-up-2 xlarge-up-2 xxxlarge-up-3 xxxxlarge-up-4">
+      %FLEXWEBLIST{
+         exclude="(OUTemplate|%FLEXWEBLIST{subwebs="none" separator="|" format="$percentIF{\"'$percentWEBPREF{\"MULTISITE_ISPUBLICATIONWEB\" alt=\"-1\" web=\"$name\"}$percent' != '0' \" then=\"$name\" else=\"none\"}$percent"}%).*" 
+         format="<web-tile :web=\"'$percentFORMATLIST{\"$map($web)\" map=\"%MODAC_WEBMAPPINGS{default=""}%\"}$percent'\" :weblink=\"'/$web'\" :globalreq=\"'$percentFORMATLIST{\"$map($percentWEBPREF{\"MULTISITE_GLOBALREQUIREMENTS\" web=\"$name\"}$percent)\" map=\"%MODAC_WEBMAPPINGS{default=""}%\"}$percent'\"  :sitelogo=\"'%ENCODE{"%WIKILOGOIMG%" type="entity"}%'\" :weblogo=\"'$percentENCODE{\"$percentWEBPREF{\"WIKILOGOIMG\" web=\"$name\"}$percent\" type=\"entity\"}$percent'\" :subwebs=\"["
+         header=""
+         subfooter="]\"></web-tile>"
+         footer=""
+         subformat="{ web: '/$web', name: '$percentFORMATLIST{\"$map($name)\" map=\"%MODAC_WEBMAPPINGS{default=""}%\"}$percent' },"
+      }%
+    </div>
+  </div>
+</div>
+%TMPL:END%

@@ -1,0 +1,25 @@
+{
+    "appname": "MultisitePortalAppContrib",
+    "description": "",
+    "installConfigs": [
+        {
+            "name": "Multisite",
+            "destinationWeb": "Portal",
+            "webPreferences": [
+                {
+                    "name": "DISABLE_LOCAL_APPLICATION_WEB_LEFT",
+                    "value": "1"
+                }
+            ],
+            "webHomeConfig": {
+                "topicTitle": "Portal",
+                "viewTemplate": "PortalWebHomeView"
+            },
+            "webActionsConfig" : {
+                "sourceTopic": "MultisitePortalDefaultWebActions"
+            },
+            "formConfigs": [
+            ]
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+node_modules/
+pub/System/MultisitePortalAppContrib/portal.js
+pub/System/MultisitePortalAppContrib/portal.js.map
+*.swo
+tags
