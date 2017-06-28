@@ -28,7 +28,7 @@
   "script"
   id="FOUNDATION::SCRIPTS"
   requires="JQUERYPLUGIN::FOSWIKI::PREFERENCES"
-  text="<script type='text/javascript' src='%PUBURLPATH%/System/FlatSkin/js/foundation.js'></script>"
+  text="<script type='text/javascript' src='%PUBURLPATH%/System/FlatSkin/js/foundation.min.js'></script>"
 }%
 %ADDTOZONE{
   "head"
