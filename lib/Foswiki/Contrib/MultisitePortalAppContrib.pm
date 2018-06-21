@@ -10,29 +10,6 @@ our $RELEASE = "1";
 
 our $SHORTDESCRIPTION = 'Modell Aachen Portal WikiApp';
 
-sub initPlugin {
-    my ( $topic, $web, $user, $installWeb ) = @_;
-
-    Foswiki::Func::registerTagHandler(
-        'PORTALTOKENS', \&_tagPortalTokens );
-}
-
-sub _tagPortalTokens {
-    my ( $session, $attributes, $topic, $web, $meta ) = @_;
-
-    my $clientId = "Portal_" . substr(md5_hex(rand), -6);
-    my $clientToken = Foswiki::Plugins::VueJSPlugin::registerClient( $clientId );
-
-    # Specialcase for multisitePortalApp: only generate a required token
-    return sprintf(
-        ' data-vue-client-id="%s" data-vue-client-token="%s" ',
-        $clientId,
-        $clientToken
-    );
-}
-
-
-
 1;
 
 __END__
