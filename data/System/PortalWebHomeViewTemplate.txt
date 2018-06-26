@@ -14,9 +14,9 @@
 }%
 %ADDTOZONE{
   "script"
-  id="MULTISITEPORTALAPPCONTRIB::I18N"
+  id="MULTISITEPORTALAPPPLUGIN::I18N"
   requires="jsi18nCore"
-  text="<script type='text/javascript' src='%PUBURLPATH%/System/MultisitePortalAppContrib/jsi18n.%IF{"$LANGUAGE!=''" then="%LANGUAGE%" else="en"}%.js'></script>"
+  text="<script type='text/javascript' src='%PUBURLPATH%/System/MultisitePortalAppPlugin/jsi18n.%IF{"$LANGUAGE!=''" then="%LANGUAGE%" else="en"}%.js'></script>"
 }%
 %ADDTOZONE{
   "script"

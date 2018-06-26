@@ -13,10 +13,10 @@ data/_apps/Portal/WebSearchAdvanced.txt 0664
 data/_apps/Portal/WebTopicList.txt 0664
 data/System/PortalWebHomeViewTemplate.txt 0664
 data/System/MultisitePortalDefaultWebActions.txt 0664
-data/System/MultisitePortalAppContrib.txt 0664
-lib/Foswiki/Contrib/MultisitePortalAppContrib.pm 0444
-lib/Foswiki/Contrib/MultisitePortalAppContrib/appconfig_new.json 0444
-locale/MultisitePortalAppContrib/de.po 0664
-pub/System/MultisitePortalAppContrib/jsi18n.de.js 0444
-pub/System/MultisitePortalAppContrib/portal.js 0444
+data/System/MultisitePortalAppPlugin.txt 0664
+lib/Foswiki/Plugins/MultisitePortalAppPlugin.pm 0444
+lib/Foswiki/Plugins/MultisitePortalAppPlugin/appconfig_new.json 0444
+locale/MultisitePortalAppPlugin/de.po 0664
+pub/System/MultisitePortalAppPlugin/jsi18n.de.js 0444
+pub/System/MultisitePortalAppPlugin/portal.js 0444
 lib/Foswiki/Plugins/MultisitePortalAppPlugin.pm 0644 Tag handlers

@@ -25,8 +25,8 @@ sub _tagPortalToken {
     my ( $session, $attributes, $topic, $web, $meta ) = @_;
 
     my $clientToken = Foswiki::Plugins::VueJSPlugin::getClientToken();
-    Foswiki::Func::addToZone( 'script', 'MULTISITEPORTALAPPCONTRIB::SCRIPTS',
-        "<script type='text/javascript' src='%PUBURLPATH%/System/MultisitePortalAppContrib/portal.js?v=$RELEASE'></script>","VUEJSPLUGIN,JQUERYPLUGIN"
+    Foswiki::Func::addToZone( 'script', 'MULTISITEPORTALAPPPLUGIN::SCRIPTS',
+        "<script type='text/javascript' src='%PUBURLPATH%/System/MultisitePortalAppPlugin/portal.js?v=$RELEASE'></script>","VUEJSPLUGIN,JQUERYPLUGIN"
     );
 
     # Specialcase for multisitePortalApp: only generate a required token

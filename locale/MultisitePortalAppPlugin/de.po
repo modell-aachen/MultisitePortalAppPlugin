@@ -1,20 +1,20 @@
-# German translation for the MultisitePortalAppContrib-Application
+# German translation for the MultisitePortalAppPlugin-Application
 # Translators: Modell Aachen
 msgid ""
 msgstr ""
-"Project-Id-Version: MultisitePortalAppContrib $Id\n"
+"Project-Id-Version: MultisitePortalAppPlugin $Id\n"
 "Report-Msgid-Bugs-To: support@modell-aachen.de\n"
 "POT-Creation-Date: Mon Jul 25 16:46:22 2016\n"
 "PO-Revision-Date: Mon Jul 25 16:48:01 2016\n"
 "Last-Translator: Modell Aachen <access@modell-aachen.de>\n"
-"Language-Team: German <http://translate.modell-aachen.de/projects/MultisitePortalAppContrib\n"
+"Language-Team: German <http://translate.modell-aachen.de/projects/MultisitePortalAppPlugin\n"
 "/releaseriga/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;.\n"
-"X-Generator: MultisitePortalAppContrib"
+"X-Generator: MultisitePortalAppPlugin"
 
 msgid "Global Requirements"
 msgstr "Globale Vorgaben"
