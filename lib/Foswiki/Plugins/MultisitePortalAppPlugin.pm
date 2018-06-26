@@ -3,21 +3,14 @@ package Foswiki::Plugins::MultisitePortalAppPlugin;
 use strict;
 use warnings;
 
-use Foswiki::Func    ();    # The plugins API
-use Foswiki::Plugins ();    # For the API version
-
-use JSON;
-
 our $VERSION = '1';
 our $RELEASE = "1";
 
 our $SHORTDESCRIPTION = 'Modell Aachen Portal WikiApp Plugin';
 
 sub initPlugin {
-    Foswiki::Func::writeWarning(" init MPA Plugin ");
     Foswiki::Func::registerTagHandler(
         'PORTALTOKEN', \&_tagPortalToken );
-
     return 1;
 }
 
@@ -28,12 +21,9 @@ sub _tagPortalToken {
     Foswiki::Func::addToZone( 'script', 'MULTISITEPORTALAPPPLUGIN::SCRIPTS',
         "<script type='text/javascript' src='%PUBURLPATH%/System/MultisitePortalAppPlugin/portal.js?v=$RELEASE'></script>","VUEJSPLUGIN,JQUERYPLUGIN"
     );
-
     # Specialcase for multisitePortalApp: only generate a required token
     return "data-vue-client-token='$clientToken'"
 }
-
-
 
 1;
 

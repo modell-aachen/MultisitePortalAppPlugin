@@ -19,4 +19,3 @@ lib/Foswiki/Plugins/MultisitePortalAppPlugin/appconfig_new.json 0444
 locale/MultisitePortalAppPlugin/de.po 0664
 pub/System/MultisitePortalAppPlugin/jsi18n.de.js 0444
 pub/System/MultisitePortalAppPlugin/portal.js 0444
-lib/Foswiki/Plugins/MultisitePortalAppPlugin.pm 0644 Tag handlers
