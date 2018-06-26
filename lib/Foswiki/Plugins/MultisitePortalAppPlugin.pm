@@ -7,7 +7,6 @@ use Foswiki::Func    ();    # The plugins API
 use Foswiki::Plugins ();    # For the API version
 
 use JSON;
-use Digest::MD5 qw(md5_hex);
 
 our $VERSION = '1';
 our $RELEASE = "1";
@@ -25,19 +24,13 @@ sub initPlugin {
 sub _tagPortalToken {
     my ( $session, $attributes, $topic, $web, $meta ) = @_;
 
-    my $clientId = "Portal_" . substr(md5_hex(rand), -6);
-    my $clientToken = Foswiki::Plugins::VueJSPlugin::registerClient( $clientId );
-
-     Foswiki::Func::addToZone( 'script', 'MULTISITEPORTALAPPCONTRIB::SCRIPTS',
-        "<script type='text/javascript' src='%PUBURLPATH%/System/MultisitePortalAppContrib/portal.js'></script>","VUEJSPLUGIN,JQUERYPLUGIN"
+    my $clientToken = Foswiki::Plugins::VueJSPlugin::getClientToken();
+    Foswiki::Func::addToZone( 'script', 'MULTISITEPORTALAPPCONTRIB::SCRIPTS',
+        "<script type='text/javascript' src='%PUBURLPATH%/System/MultisitePortalAppContrib/portal.js?v=$RELEASE'></script>","VUEJSPLUGIN,JQUERYPLUGIN"
     );
 
     # Specialcase for multisitePortalApp: only generate a required token
-    return sprintf(
-        ' data-vue-client-id="%s" data-vue-client-token="%s" ',
-        $clientId,
-        $clientToken
-    );
+    return "data-vue-client-token='$clientToken'"
 }
 
 
