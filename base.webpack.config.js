@@ -19,7 +19,7 @@ module.exports = {
     app: ['./dev/main.js']
   },
   output: {
-    path: path.join(__dirname, 'pub/System/MultisitePortalAppContrib'),
+    path: path.join(__dirname, 'pub/System/MultisitePortalAppPlugin'),
     filename: 'portal.js'
   },
   devtool: "source-map",

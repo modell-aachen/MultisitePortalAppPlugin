@@ -36,7 +36,7 @@
                   </a>
               </span>
             </span>
-            
+
         </div>
     </div>
 </template>
@@ -51,7 +51,7 @@ export default {
             show: false,
             hover: false,
             overlay: false,
-            globalreqTrans: jsi18n.get('MultisitePortalAppContrib',"Global Requirements from")
+            globalreqTrans: jsi18n.get('MultisitePortalAppPlugin',"Global Requirements from")
         };
     },
     methods: {
