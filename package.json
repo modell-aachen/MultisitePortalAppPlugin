@@ -1,8 +1,8 @@
 {
-  "name": "MultisitePortalAppContrib",
+  "name": "MultisitePortalAppPlugin",
   "version": "1.0.0",
-  "description": "MultisitePortalAppContrib",
-  "main": "pub/System/MultisitePortalAppContrib/portal.js",
+  "description": "MultisitePortalAppPlugin",
+  "main": "pub/System/MultisitePortalAppPlugin/portal.js",
   "scripts": {
     "build": "webpack -d --watch --config development.webpack.config.js --progress",
     "build-production": "NODE_ENV=production webpack -p --config production.webpack.config.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.modac.lan:q-wiki/MultisitePortalAppContrib.git"
+    "url": "git@github.com:modell-aachen/MultisitePortalAppPlugin.git"
   },
   "author": "Modell Aachen GmbH",
   "license": "GPL-3.0",
