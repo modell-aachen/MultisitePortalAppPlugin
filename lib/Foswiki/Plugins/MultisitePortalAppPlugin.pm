@@ -3,6 +3,9 @@ package Foswiki::Plugins::MultisitePortalAppPlugin;
 use strict;
 use warnings;
 
+use Foswiki::Func();
+use Foswiki::Plugins();
+
 our $VERSION = '1';
 our $RELEASE = "1";
 
@@ -23,6 +26,27 @@ sub _tagPortalToken {
     );
     # Specialcase for multisitePortalApp: only generate a required token
     return "data-vue-client-token='$clientToken'"
+}
+
+sub maintenanceHandler {
+    Foswiki::Plugins::MaintenancePlugin::registerCheck("multisiteportalappcontrib:check_redirect", {
+        name => "Redirect",
+        description => "Check if Main/WebHome Redirects to Portal if installed",
+        check => sub {
+            my @result;
+            my ($meta,$text) = Foswiki::Func::readTopic("Main","WebHome");
+            my $portalRedirect = '%IF{"Portal isweb" then="$percntREDIRECT{Portal.WebHome}$percnt" else="$percntREDIRECT{Processes.WebHome}$percnt"}%';
+            if(index($text,$portalRedirect) != -1){
+                return {result => 0};
+            }
+            return {
+                    result => 1,
+                    priority => $Foswiki::Plugins::MaintenancePlugin::WARN,
+                    solution => "Please set Redirect to Portal on Main/WebHome with <verbatim>".'%IF{"Portal isweb" then="$percntREDIRECT{Portal.WebHome}$percnt" else="$percntREDIRECT{Processes.WebHome}$percnt"}%'."</verbatim>"
+            };
+
+        }
+    });
 }
 
 1;
