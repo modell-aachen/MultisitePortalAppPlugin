@@ -1,7 +1,6 @@
 /* global $ Vue */
-import WebTile from './components/WebTile.vue'
-import $ from 'jquery'
+import WebTile from './components/WebTile.vue';
 
-$( function () {
-    Vue.instantiateEach( '.portal', { components: { webTile: WebTile } });
-})
+$(function () {
+    Vue.instantiateEach('.portal', { components: { webTile: WebTile } });
+});

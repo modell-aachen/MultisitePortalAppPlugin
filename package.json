@@ -1,5 +1,5 @@
 {
-  "name": "MultisitePortalAppPlugin",
+  "name": "multisiteportalappplugin",
   "version": "1.0.0",
   "description": "MultisitePortalAppPlugin",
   "main": "pub/System/MultisitePortalAppPlugin/portal.js",
@@ -26,7 +26,6 @@
     "compression-webpack-plugin": "^2.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.2",
-    "jquery": "^3.4.1",
     "node-sass": "^4.5.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.1.8"
