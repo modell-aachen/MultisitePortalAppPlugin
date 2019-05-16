@@ -78,7 +78,7 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="scss">
     .portal .wrapper {
         .text-center{
             text-align: center;
