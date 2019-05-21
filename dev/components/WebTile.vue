@@ -126,7 +126,9 @@ export default {
             el.className += ' afterEnter';
         },
         mouseOver(){
-            if(!this.overlay)this.hover = true;
+            if(!this.overlay) {
+                this.hover = true;
+            }
         },
         clickHover(){
             this.hover = false;
