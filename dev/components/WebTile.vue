@@ -1,84 +1,144 @@
 <template>
     <div class="columns">
         <div class="wrapper">
-            <div @mouseover="mouseOver()" @mouseleave="hover = false" class="webbox">
-                <transition name="fade" mode="out-in" >
-                    <span v-if="!show" class="weblogo">
-                        <a :href="this.weblink+'/Processes'"><img :src="getWebLogo()" /></a>
+            <div
+                class="webbox"
+                @mouseover="mouseOver()"
+                @mouseleave="hover = false">
+                <transition
+                    name="fade"
+                    mode="out-in">
+                    <span
+                        v-if="!show"
+                        class="weblogo">
+                        <a :href="weblink+'/Processes'"><img :src="getWebLogo()"></a>
                     </span>
-                    <div v-if="show" class="subwebs expanded row medium-up-2 xlarge-up-2 xxxlarge-up-2 xxxxlarge-up-2">
-                        <div v-for="(subweb,index) in subwebs" v-bind:class="[index%2 == 0 ? 'columns' : 'btnlast columns']" >
-                            <a class="button small primary sublink" :href="subweb.web">{{ subweb.name }}</a>
+                    <div
+                        v-if="show"
+                        class="subwebs expanded row medium-up-2 xlarge-up-2 xxxlarge-up-2 xxxxlarge-up-2">
+                        <div
+                            v-for="(subweb,index) in subwebs"
+                            :key="subweb.name"
+                            :class="[index%2 == 0 ? 'columns' : 'btnlast columns']">
+                            <a
+                                class="button small primary sublink"
+                                :href="subweb.web">{{ subweb.name }}</a>
                         </div>
                     </div>
                 </transition>
-                <transition name="fade" v-on:after-enter="afterEnter" ode="out-in">
-                    <div v-if="!show && overlay" class="weboverlay" >
-                        <a v-on:click="overlay = false">
-                            <i class="fa fa-times" aria-hidden="true"></i>
+                <transition
+                    name="fade"
+                    ode="out-in"
+                    @after-enter="afterEnter">
+                    <div
+                        v-if="!show && overlay"
+                        class="weboverlay">
+                        <a @click="overlay = false">
+                            <i
+                                class="fa fa-times"
+                                aria-hidden="true" />
                         </a>
-                        <span><strong>{{globalreqTrans}}:</strong></span>
-                        <span>{{globalreq}}</span>
+                        <span><strong>{{ globalreqTrans }}:</strong></span>
+                        <span>{{ globalreq }}</span>
                     </div>
-                    <div class="webhover" v-if="hover && !overlay && !show">
-                        <a class="" v-on:click="clickHover();">
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    <div
+                        v-if="hover && !overlay && !show"
+                        class="webhover">
+                        <a
+                            class=""
+                            @click="clickHover();">
+                            <i
+                                class="fa fa-info-circle"
+                                aria-hidden="true" />
                         </a>
                     </div>
                 </transition>
             </div>
             <span class="row">
-              <span class="small-11 large-11 columns text-center"><h4>{{ web }}</h4></span>
-              <span class="small-1 large-1 columns">
-                  <a class="btnswitch" v-on:click="show = !show; overlay = false">
-                    <i v-if="!show" class="fa fa-th-large" aria-hidden="true"></i>
-                    <i v-if="show" class="fa fa-reply" aria-hidden="true"></i>
-                  </a>
-              </span>
+                <span class="small-11 large-11 columns text-center"><h4>{{ web }}</h4></span>
+                <span class="small-1 large-1 columns">
+                    <a
+                        class="btnswitch"
+                        @click="show = !show; overlay = false">
+                        <i
+                            v-if="!show"
+                            class="fa fa-th-large"
+                            aria-hidden="true" />
+                        <i
+                            v-if="show"
+                            class="fa fa-reply"
+                            aria-hidden="true" />
+                    </a>
+                </span>
             </span>
-
         </div>
     </div>
 </template>
 
 <script>
-import $ from 'jquery'
 
 export default {
-    props: ['weblink', 'sitelogo','globalreq', 'weblogo', 'web', 'subwebs'],
+    components: {
+    },
+    props: {
+        weblink: {
+            type: String,
+            default: '',
+        },
+        sitelogo: {
+            type: String,
+            default: '',
+        },
+        globalreq: {
+            type: String,
+            default: '',
+        },
+        weblogo: {
+            type: String,
+            default: '',
+        },
+        web: {
+            type: String,
+            default: '',
+        },
+        subwebs: {
+            type: Array,
+            default: () => [],
+        },
+    },
     data: function(){
         return {
             show: false,
             hover: false,
             overlay: false,
-            globalreqTrans: jsi18n.get('MultisitePortalAppPlugin',"Global Requirements from")
+            globalreqTrans: jsi18n.get('MultisitePortalAppPlugin', 'Global Requirements from'),
         };
     },
     methods: {
         getWebLogo(){
-            if(this.weblogo.indexOf("<Name of logo>") != -1){
+            if(this.weblogo.indexOf('<Name of logo>') !== -1){
                 return this.sitelogo;
             }else{
                 return this.weblogo;
             }
         },
         afterEnter(el) {
-            el.className += " afterEnter";
+            el.className += ' afterEnter';
         },
         mouseOver(){
-            if(!this.overlay)this.hover = true;
+            if(!this.overlay) {
+                this.hover = true;
+            }
         },
         clickHover(){
             this.hover = false;
             this.overlay = true;
-        }
+        },
     },
-    components: {
-    },
-}
+};
 </script>
 
-<style lang="sass">
+<style lang="scss">
     .portal .wrapper {
         .text-center{
             text-align: center;
