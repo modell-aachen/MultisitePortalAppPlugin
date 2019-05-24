@@ -5,9 +5,8 @@
   "main": "pub/System/MultisitePortalAppPlugin/portal.js",
   "scripts": {
     "build": "vue-cli-service build --no-clean",
-    "postinstall": "yarn build",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint dev"
+    "lint": "vue-cli-service lint dev",
+    "test:unit": "vue-cli-service test:unit"
   },
   "repository": {
     "type": "git",
@@ -19,6 +18,7 @@
     "@modac/eslint-config": "^0.1.2",
     "@modac/jest-config": "^0.1.0",
     "@modac/tsconfig": "^0.1.0",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@vue/cli-plugin-babel": "^3.7.0",
     "@vue/cli-plugin-eslint": "^3.7.0",
     "@vue/cli-plugin-unit-jest": "^3.7.0",
