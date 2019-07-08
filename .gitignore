@@ -1,6 +1,6 @@
 node_modules/
-pub/System/MultisitePortalAppPlugin/portal.js
-pub/System/MultisitePortalAppPlugin/portal.js.map
+pub/System/MultisitePortalAppPlugin/portal.*
 *.swo
 tags
 yarn.lock
+yarn-error.log
